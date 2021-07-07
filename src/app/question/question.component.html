@@ -1,0 +1,19 @@
+<div class="ui-g">
+    <div class="ui-g-12" style="overflow: scroll;">
+        <table>
+            <tr style="height: 100px;">
+                <th style="width: 200px;">
+                    <input type="text" [(ngModel)]="textNumber" pInputText pKeyFilter="money" (keyup.enter)="checkNumber()" />
+                </th>
+                <th style="min-width: 100px;">
+                    <select [(ngModel)]="selectedOption" class="form-select" aria-label="Default select example" style="width: auto;" (change)="IsPrimeOrFibanacci()">
+                        <option *ngFor="let x of calNumber" >{{ x.value }}</option>
+                    </select>
+                </th>
+                <th style="width: 300px;">
+                    {{ isPrimeOrFibanacci }}
+                </th>
+            </tr>
+        </table>
+    </div>
+</div>
